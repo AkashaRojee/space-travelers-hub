@@ -3,12 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from './missionsSlice';
 const Missions = () => {
   const dispatch =  useDispatch();
-  const { missions } =  useSelector((state) => state);
-  console.log(missions.missions);
+  const { missions } =  useSelector((state) => state).missions;
+  console.log(missions);
   useEffect(() => {
     dispatch(getMissions())
   }, [dispatch]);
-  return (<p>missions</p>)
+  return (<div>
+    {
+      missions.map((mission) => <p key={mission.mission_id}>{mission.description}</p>)
+    }
+    </div>)
 }
 
 
