@@ -8,9 +8,11 @@
 ul {
   list-style-type: none
 }
+
 img{
   max-width: 100%;
 }
+
 a {
   text-decoration:  none;
 }
@@ -20,24 +22,31 @@ a {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .flex {
   display: flex
 }
+
 .space-between {
   justify-content: space-between
 }
+
 .cross-center {
   align-items: center;
 }
+
 .gap-1 {
   gap: 1rem
 }
+
 .gap-2 {
   gap: 2rem
 }
+
 .gap-3 {
   gap: 3rem
 }
+
 
 .header{
   padding: 2em 0;
@@ -45,6 +54,7 @@ a {
   margin-bottom: 3rem;
   font-family: 'Oswald', sans-serif;
 }
+
 .nav-bar {
   letter-spacing: 2px;
 }
