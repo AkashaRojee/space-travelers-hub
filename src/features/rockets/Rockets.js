@@ -10,20 +10,21 @@ const Rockets = () => {
 
   useEffect(
     () => {
-      dispatch(getRockets());
+      if (rockets.length === 0) dispatch(getRockets());
     },
     []
   );
   
   return (
     <div>
-      { rockets.map(({id, title, description, image}) => (
+      { rockets.map(({id, title, description, image, reserved = false}) => (
         <RocketRow
           key={id}
           id={id}
           title={title}
           description={description}
           image={image}
+          reserved={reserved}
         />
       ))}
     </div>

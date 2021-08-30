@@ -6,9 +6,9 @@ import styles from './RocketRow.module.scss';
 import { reserve, cancel } from '../rocketSlice';
 import { useDispatch } from 'react-redux';
 
-const RocketRow = ({id, title, description, image}) => {
+const RocketRow = ({id, title, description, image, reserved}) => {
 
-  const [ buttonText, setButtonText ] = useState('Reserve');
+  const [ buttonText, setButtonText ] = useState(reserved ? 'Cancel' : 'Reserve');
 
   const dispatch = useDispatch();
 
