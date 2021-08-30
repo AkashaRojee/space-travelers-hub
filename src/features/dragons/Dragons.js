@@ -1,31 +1,29 @@
+import Dragon from "./Dragon";
 import "./Dragons.css";
 const Dragons = () => {
-  const isReserved = false;
+  const dragonsList = [
+    {
+      id: 1,
+      name: "Dragon 2",
+      type: "capsule",
+      flickr_images:
+        "https://farm8.staticflickr.com/7647/16581815487_6d56cb32e1_b.jpg",
+      isReserved: true,
+    },
+    {
+      id: 2,
+      name: "Dragon 7",
+      type: "capsule",
+      flickr_images:
+        "https://farm8.staticflickr.com/7647/16581815487_6d56cb32e1_b.jpg",
+      isReserved: false,
+    },
+  ];
   return (
     <div className="container">
-      <div className="card">
-        <div className="container flex gap-2">
-          <img src="./img/9fWdwNv.jpg" alt="" className="card__img" />
-          <div className="card__text flex portrait gap-1">
-            <h4 className="card__heading no-stretch">
-              {isReserved ? (
-                <span className="label label--reserved txt-center">
-                  Reserved
-                </span>
-              ) : null}
-              Falcon 2
-            </h4>
-            <p>type: capsule</p>
-            <button
-              className={`btn no-stretch ${
-                isReserved ? "btn--reserved" : "btn--un-reserved"
-              }`}
-            >
-              {isReserved ? "Cancel Reservation" : "Reserve Dragon"}
-            </button>
-          </div>
-        </div>
-      </div>
+      {dragonsList.map((dragon) => (
+        <Dragon key={dragon.id} data={dragon} />
+      ))}
     </div>
   );
 };
