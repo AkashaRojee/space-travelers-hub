@@ -4,6 +4,7 @@ import Rockets from "../features/rockets/Rockets";
 import Dragons from "../features/dragons/Dragons";
 import Missions from "../features/missions/Missions";
 import Profile from "../features/profile/Profile";
+import '../assets/css/main.css';
 
 function App() {
   return (

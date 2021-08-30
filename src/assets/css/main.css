@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +6,7 @@
 }
 
 ul {
-  list-style-type: none
+  list-style-type: none;
 }
 
 img {
@@ -15,7 +14,7 @@ img {
 }
 
 a {
-  text-decoration:  none;
+  text-decoration: none;
 }
 
 .container {
@@ -25,11 +24,11 @@ a {
 }
 
 .flex {
-  display: flex
+  display: flex;
 }
 
 .space-between {
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .cross-center {
@@ -37,23 +36,22 @@ a {
 }
 
 .gap-1 {
-  gap: 1rem
+  gap: 1rem;
 }
 
 .gap-2 {
-  gap: 2rem
+  gap: 2rem;
 }
 
 .gap-3 {
-  gap: 3rem
+  gap: 3rem;
 }
 
-
-.header{
+.header {
   padding: 2em 0;
   border: 1px solid black;
   margin-bottom: 3rem;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .nav-bar {
@@ -65,11 +63,14 @@ a {
   color: black;
 }
 
-.logo{
+.logo {
   width: 20%;
-
 }
 
-.active{
+.active {
   color: red;
+}
+
+.missions-section {
+  background-color: red;
 }
