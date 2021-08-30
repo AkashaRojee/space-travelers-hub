@@ -20,7 +20,7 @@ const Header = () => {
             {
               linkList.map(({ id, name, to }) => (
             <li key={id} className="nav-link">
-                  <NavLink to={to}>{name}</NavLink>
+              <NavLink to={to}>{name}</NavLink>
             </li>
               ))
             }
