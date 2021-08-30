@@ -1,0 +1,9 @@
+@import '../../app/scss/flex';
+
+.col {
+  @extend %flex-col;
+}
+
+.row {
+  @extend %flex-row;
+}
