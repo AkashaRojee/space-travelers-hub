@@ -12,9 +12,9 @@ const linkList = [
 
 const Header = () => {
   return (
-    <header class='header'>
-      <div class='container flex  space-between cross-center gap-2 '>
-        <img src={logo} alt="logo" class='logo' />
+    <header className='header'>
+      <div className='container flex  space-between cross-center gap-2 '>
+        <img src={logo} alt="logo" className='logo' />
         <nav className="nav-bar container ">
           <ul className="nav-list flex  cross-center gap-3">
             {
