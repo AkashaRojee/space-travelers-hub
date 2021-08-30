@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { add } from '../rockets/rocketSlice'
+import { getRockets } from '../rockets/rocketSlice'
 import RocketRow from './components/RocketRow';
 
 const Rockets = () => {
@@ -10,12 +10,10 @@ const Rockets = () => {
 
   useEffect(
     () => {
-      dispatch(add());
+      dispatch(getRockets());
     },
     []
   );
-
-  console.log(rockets);
   
   return (
     <div>

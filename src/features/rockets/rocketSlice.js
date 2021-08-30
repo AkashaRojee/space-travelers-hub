@@ -1,23 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
 
-const instance = axios.create({
-  baseURL: 'https://api.spacexdata.com/v3'
-})
-
-
+export const getRockets = () => async (dispatch) => {
+  try {
+    const {data} = await axios.get('https://api.spacexdata.com/v3/rockets');
+    data.forEach((rocket) => {
+      dispatch(add(rocket));
+    })
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const rocketSlice = createSlice({
   name: 'rockets',
   initialState: [],
   reducers: {
-    add: state => {
+    add: (state, action) => {
+      const {rocket_id, rocket_name, description, flickr_images} = action.payload;
       state.push(
         {
-          id: 'rocketid',
-          title: 'rockettitle',
-          description: 'rocketdescription',
-          image: 'https://imgur.com/DaCfMsj.jpg'
+          id: rocket_id,
+          title: rocket_name,
+          description: description,
+          image: flickr_images[0]
         });
     }
   }
