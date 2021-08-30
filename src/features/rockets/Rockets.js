@@ -20,6 +20,7 @@ const Rockets = () => {
       { rockets.map(({id, title, description, image}) => (
         <RocketRow
           key={id}
+          id={id}
           title={title}
           description={description}
           image={image}

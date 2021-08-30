@@ -25,11 +25,16 @@ export const rocketSlice = createSlice({
           description: description,
           image: flickr_images[0]
         });
+    },
+    reserve: (state, action) => {
+      state.find((rocket) => rocket.id == action.payload).reserved = true;
+    },
+    cancel: (state, action) => {
+      state.find((rocket) => rocket.id === action.payload).reserved = false;
     }
   }
 })
 
-// Action creators are generated for each case reducer function
-export const { add } = rocketSlice.actions
+export const { add, reserve, cancel } = rocketSlice.actions
 
 export default rocketSlice.reducer

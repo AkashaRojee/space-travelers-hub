@@ -1,10 +1,27 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 import SplitPane from '../../../common/SplitPane/SplitPane';
 import SplitPaneLayout from '../../../common/SplitPane/SplitPaneLayout';
 import styles from './RocketRow.module.scss';
+import { reserve, cancel } from '../rocketSlice';
+import { useDispatch } from 'react-redux';
 
-const RocketRow = ({title, description, image}) => {
+const RocketRow = ({id, title, description, image}) => {
+
+  const [ buttonText, setButtonText ] = useState('Reserve');
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    if (buttonText === 'Reserve') {
+      dispatch(reserve(id));
+      setButtonText((state) => 'Cancel');
+    } else {
+      dispatch(cancel(id));
+      setButtonText((state) => 'Reserve');
+    }
+    
+  };
 
   return (
     <SplitPane
@@ -20,7 +37,7 @@ const RocketRow = ({title, description, image}) => {
         <>
           <span>{title}</span>
           <span>{description}</span>
-          <button type='button'>Reserve</button>
+          <div><button type='button' onClick={handleClick}>{buttonText}</button></div>
         </>
       }
     />
