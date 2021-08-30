@@ -15,13 +15,13 @@ const Dragons = () => {
               ) : null}
               Falcon 2
             </h4>
-            <p>"type": "capsule"</p>
+            <p>type: capsule</p>
             <button
-              className={`btn ${
+              className={`btn no-stretch ${
                 isReserved ? "btn--reserved" : "btn--un-reserved"
               }`}
             >
-              Cancel Reservation
+              {isReserved ? "Cancel Reservation" : "Reserve Dragon"}
             </button>
           </div>
         </div>

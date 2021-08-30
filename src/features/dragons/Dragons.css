@@ -47,12 +47,14 @@ button {
   gap: 3rem;
 }
 .btn {
-  padding: 0.5em 1.75em;
+  padding: 0.3em 0.4em;
   border-radius: 4px;
   outline: none;
   background: transparent;
   letter-spacing: 1px;
   font-weight: 100;
+  font-size: 1rem;
+  cursor: pointer;
 }
 .btn--reserved {
   background: none;
@@ -95,8 +97,11 @@ button {
 }
 .card__text {
   font-size: clamp(1rem, 1.25vw, 2rem);
+  letter-spacing: 1px;
 }
 .card__heading {
   color: red;
+  letter-spacing: 8px;
+  font-weight: 300;
   font-size: clamp(2rem, 2.5vw, 4rem);
 }
