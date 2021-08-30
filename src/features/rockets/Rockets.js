@@ -1,13 +1,33 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { add } from '../rockets/rocketSlice'
 import RocketRow from './components/RocketRow';
 
 const Rockets = () => {
+
+  const rockets = useSelector((state) => state.rockets);
+  const dispatch = useDispatch();
+
+  useEffect(
+    () => {
+      dispatch(add());
+    },
+    []
+  );
+
+  console.log(rockets);
   
   return (
-    <RocketRow
-      title='title'
-      description='description'
-      image='https://imgur.com/DaCfMsj.jpg'
-    />
+    <div>
+      { rockets.map(({id, title, description, image}) => (
+        <RocketRow
+          key={id}
+          title={title}
+          description={description}
+          image={image}
+        />
+      ))}
+    </div>
   );
 }
 
