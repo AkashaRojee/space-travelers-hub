@@ -1,4 +1,6 @@
+/* eslint-disable react/no-typos */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TableBody = ({ missions, onJoinMission }) => {
   return (
@@ -22,5 +24,8 @@ const TableBody = ({ missions, onJoinMission }) => {
   </tbody>
   );
 };
-
+TableBody.PropTypes = {
+  mission: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onJoinMission: PropTypes.func.isRequired,
+}
 export default TableBody;
