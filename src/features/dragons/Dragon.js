@@ -1,8 +1,11 @@
 import { useDispatch } from 'react-redux';
+import * as dragonActions from './store/dragonsSlice';
 
 const Dragon = ({ data: dragonInfo }) => {
   const dispatch = useDispatch();
-  const { name, type, isReserved, img } = dragonInfo;
+  const {
+    name, type, isReserved, img,
+  } = dragonInfo;
   return (
     <div className="card">
       <div className="container flex gap-2">
@@ -28,6 +31,12 @@ const Dragon = ({ data: dragonInfo }) => {
           </button>
         </div>
       </div>
+      <button
+        type="button"
+        onClick={() => dispatch(dragonActions.loadDragons())}
+      >
+        STORE
+      </button>
     </div>
   );
 };
