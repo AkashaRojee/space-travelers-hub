@@ -1,3 +1,24 @@
 .missions-section {
-  background-color: red;
+  width: 90%;
+  margin: 0 auto;
+  .mission-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid rgb(199, 199, 199);
+    thead tr {
+      text-align: left;
+      th {
+        padding: 1rem;
+        border: 1px solid rgb(199, 199, 199);
+      }
+    }
+    tbody tr {
+      text-align: left;
+      td {
+        padding: 1rem;
+        border: 1px solid rgb(199, 199, 199);
+      }
+    }
+  }
 }
+

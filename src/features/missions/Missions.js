@@ -35,6 +35,21 @@ const Missions = () => {
               <button>Join Mission</button>
             </td>
           </tr>
+					<tr>
+            <td>Alfreds Futterkiste</td>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              porro necessitatibus maiores sequi. Dicta libero facere iste
+              adipisci odit recusandae quae fuga impedit cupiditate, sint deleniti
+              laboriosam
+            </td>
+            <td>
+              <span>Not a member</span>
+            </td>
+            <td>
+              <button>Join Mission</button>
+            </td>
+          </tr>
         </tbody>
 			</table>
 		</section>

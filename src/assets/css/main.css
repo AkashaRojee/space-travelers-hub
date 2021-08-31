@@ -72,5 +72,29 @@ a {
 }
 
 .missions-section {
-  background-color: red;
+  width: 90%;
+  margin: 0 auto;
+}
+.missions-section .mission-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #c7c7c7;
+}
+.missions-section .mission-table thead tr {
+  text-align: left;
+}
+.missions-section .mission-table thead tr th {
+  padding: 1rem;
+  border: 1px solid #c7c7c7;
+}
+.missions-section .mission-table tbody tr {
+  text-align: left;
+}
+.missions-section .mission-table tbody tr td {
+  padding: 1rem;
+  border: 1px solid #c7c7c7;
+}
+
+.App {
+  width: 100%;
 }
