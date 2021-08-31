@@ -4,7 +4,8 @@
   width: 33.3%;
 
   ul {
-    border: 1px solid black;
+    border: 1px solid grey;
+    border-radius: 5px;
     margin-top: 25px;
     margin-bottom: 25px;
   }
@@ -14,7 +15,7 @@
     padding: 10px;
 
     & + li {
-      border-top: 1px solid black;
+      border-top: 1px solid grey;
     }
   }
 }
