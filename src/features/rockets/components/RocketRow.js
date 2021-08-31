@@ -38,7 +38,7 @@ const RocketRow = ({id, title, description, image, reserved}) => {
       second={
         <>
           <div className={styles['row-heading']}>
-            <span>{reserved && 'Reserved'}</span>
+            {reserved && (<span>Reserved</span>)}
             <h2>{title}</h2>
           </div>
           <span>{description}</span>

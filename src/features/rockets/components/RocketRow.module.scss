@@ -16,6 +16,14 @@
     .row-heading {
       display: flex;
       align-items: center;
+      
+      span {
+        background-color: blue;
+        color: white;
+        margin-right: 25px;
+        padding: 1px 2.5px;
+        border-radius: 2.5px;
+      }
     }
 
     .row-button {
