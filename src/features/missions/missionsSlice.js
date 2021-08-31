@@ -27,12 +27,12 @@ const missionSlice =  createSlice({
         state.status = 'failed';
       })
       builder.addCase(joinMission, (state, payload) => {
-        const store = [...state.missions]
-        store.find((mission) => mission.mission_id === payload.payload).joined = true;
+        const missions = [...state.missions]
+        missions.find((mission) => mission.mission_id === payload.payload).joined = true;
       })
       builder.addCase(leaveMission, (state, payload) => {
-        const store = [...state.missions]
-        store.find((mission) => mission.mission_id === payload.payload).joined = false;
+        const missions = [...state.missions]
+        missions.find((mission) => mission.mission_id === payload.payload).joined = false;
       })
     }
   });
