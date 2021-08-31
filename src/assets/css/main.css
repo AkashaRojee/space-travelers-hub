@@ -115,8 +115,8 @@ button {
   font-size: 0.9rem;
 }
 .missions-section .mission-table tbody tr td span.joined {
-  border: 1px solid #e04f5c;
-  color: #e04f5c;
+  color: #fff;
+  background-color: #42a3b8;
 }
 .missions-section .mission-table tbody tr td button {
   border: 1px solid #6d757d;
@@ -126,7 +126,7 @@ button {
   cursor: pointer;
 }
 .missions-section .mission-table tbody tr td button.joined {
-  border: 1px solid #e04f5c;
+  border: 1.5px solid #e04f5c;
   color: #e04f5c;
 }
 .missions-section .mission-table tbody tr:nth-child(2n+1) {
