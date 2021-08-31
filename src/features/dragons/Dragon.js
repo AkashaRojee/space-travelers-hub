@@ -1,7 +1,8 @@
+import { useDispatch } from 'react-redux';
+
 const Dragon = ({ data: dragonInfo }) => {
-  const {
-    name, type, isReserved, img,
-  } = dragonInfo;
+  const dispatch = useDispatch();
+  const { name, type, isReserved, img } = dragonInfo;
   return (
     <div className="card">
       <div className="container flex gap-2">

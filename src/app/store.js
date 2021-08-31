@@ -3,7 +3,7 @@ import rootReducer from './rootReducer';
 import api from '../features/dragons/store/middleware/api';
 
 const store = configureStore({
-  rootReducer,
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api),
 });
 
