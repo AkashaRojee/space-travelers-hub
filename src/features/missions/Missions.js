@@ -1,14 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions, joinMission} from './missionsSlice';
 
 const Missions = () => {
 	const dispatch = useDispatch();
+	const [joined, setjoined] = useState(false);
 	const { missions } = useSelector((state) => state).missions;
 	console.log(missions);
 	const handleJoinMission = (id) => {
+		if(joined) {
+			dispatch(joinMission(id));
+			setjoined(true);
+		}
 		console.log(missions);
-		dispatch(joinMission(id))
 	}
 	useEffect(() => {
 		dispatch(getMissions());
