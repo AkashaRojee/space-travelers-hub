@@ -20,11 +20,11 @@ const initialState = {
 };
 const reducer = (state = initialState, action) => {
   const { type, payload } = action;
-  if (type === DRAGONS_REQUESTED) return { ...state, loading: true };
+  if (type === DRAGONS_REQUESTED) return { ...state, isLoading: true };
   if (type === DRAGONS_LOADED) {
     return {
       ...state,
-      loading: false,
+      isLoading: false,
       list: payload.map(({ id, name, type, flickr_images: [imgSrc] }) => ({
         id,
         name,

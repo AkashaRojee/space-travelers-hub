@@ -16,9 +16,16 @@ const Dragons = () => {
 
   return (
     <div className="container">
-      {dragonsList.map((dragon) => (
-        <Dragon key={dragon.id} data={dragon} />
-      ))}
+      {isLoading ? (
+        <p className="loading">LOADING......</p>
+      ) : (
+        <>
+          {' '}
+          {dragonsList.map((dragon) => (
+            <Dragon key={dragon.id} data={dragon} />
+          ))}
+        </>
+      )}
     </div>
   );
 };
