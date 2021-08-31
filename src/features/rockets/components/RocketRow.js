@@ -13,12 +13,12 @@ const RocketRow = ({id, title, description, image, reserved}) => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    if (buttonText === 'Reserve') {
-      dispatch(reserve(id));
-      setButtonText((state) => 'Cancel');
-    } else {
+    if (reserved) {
       dispatch(cancel(id));
       setButtonText((state) => 'Reserve');
+    } else {
+      dispatch(reserve(id));
+      setButtonText((state) => 'Cancel');
     }
     
   };
@@ -35,7 +35,7 @@ const RocketRow = ({id, title, description, image, reserved}) => {
       }
       second={
         <>
-          <span>{title}</span>
+          <span>{reserved && 'Reserved'} {title}</span>
           <span>{description}</span>
           <div><button type='button' onClick={handleClick}>{buttonText}</button></div>
         </>
