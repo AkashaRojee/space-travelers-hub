@@ -6,7 +6,7 @@ const Profiles = () => {
   return (<div>
     {
       joinedMission.map((mission) => (
-        <p>{mission.mission_name}</p>
+        <p key={mission.mission_id}>{mission.mission_name}</p>
       ))
     }
   </div>)
