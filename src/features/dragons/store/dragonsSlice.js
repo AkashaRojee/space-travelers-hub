@@ -17,6 +17,11 @@ export const reserveDragon = (id) => ({
   type: DRAGON_RESERVED,
   payload: { id },
 });
+export const unReserveDragon = (id) => ({
+  type: DRAGON_RESERVED,
+  payload: { id },
+});
+
 // REDUCER
 const initialState = {
   list: [],
@@ -43,6 +48,14 @@ const reducer = (state = initialState, action) => {
       ...state,
       list: state.list.map((dragon) =>
         dragon.id === payload.id ? { ...dragon, isReserved: true } : dragon
+      ),
+    };
+  }
+  if (type === DRAGON_UNRESERVED) {
+    return {
+      ...state,
+      list: state.list.map((dragon) =>
+        dragon.id === payload.id ? { ...dragon, isReserved: false } : dragon
       ),
     };
   }
