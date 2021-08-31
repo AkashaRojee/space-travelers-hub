@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions, joinMission, leaveMission } from './missionsSlice';
 
 const Missions = () => {
 	const dispatch = useDispatch();
-	const [joined, setjoined] = useState(false);
 	const { missions } = useSelector((state) => state).missions;
-	const handleJoinMission = (id) => {
+	const handleJoinMission = (id, joined) => {
 		if(!joined) {
-			setjoined(true);
+		console.log(joined, id);
 			dispatch(joinMission(id));
 		} else {
+		console.log(joined, id);
 			dispatch(leaveMission(id));
-			setjoined(false);
 		}
 	}
 	console.log(missions);
@@ -39,10 +38,10 @@ const Missions = () => {
 								{mission.description}
 							</td>
 							<td>
-								<span>Not a member</span>
+								<span className={`${ mission.joined ? 'joined' : ''}`} >Not a member</span>
 							</td>
 							<td>
-								<button onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</button>
+								<button className={`${ mission.joined ? 'joined' : ''}`} onClick={() => handleJoinMission(mission.mission_id, mission.joined )}>Join Mission</button>
 							</td>
 						</tr>
 						))

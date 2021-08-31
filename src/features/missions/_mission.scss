@@ -32,6 +32,10 @@
           border-radius: 0.4rem;
           color: #fff;
           font-size: 0.9rem;
+          &.joined {
+            border: 1px solid #e04f5c;
+            color: #e04f5c;
+          }
         }
         button {
           border: 1px solid #6d757d;
@@ -39,6 +43,10 @@
           font-size: 0.8rem;
           padding: 0.3rem 0.6rem;
           cursor: pointer;
+          &.joined {
+            border: 1px solid #e04f5c;
+            color: #e04f5c;
+          }
         }
       }
       &:nth-child(2n+1) {
