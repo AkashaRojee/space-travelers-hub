@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'; 
+import { createSlice, createAsyncThunk, createAction } from '@reduxjs/toolkit'; 
 import axios from 'axios';
 
 export const getMissions = createAsyncThunk('/missions/getMissions', async () => {
@@ -6,7 +6,9 @@ export const getMissions = createAsyncThunk('/missions/getMissions', async () =>
       return data
 });
 
-  const missionSlice =  createSlice({
+export const joinMission = createAction('joinMission');
+
+const missionSlice =  createSlice({
     name: 'missons',
     initialState: {
       missions: [],
@@ -22,6 +24,10 @@ export const getMissions = createAsyncThunk('/missions/getMissions', async () =>
       } )
       builder.addCase(getMissions.rejected, (state) => {
         state.status = 'failed';
+      })
+      builder.addCase(joinMission, (state, payload) => {
+        const store = [...state.missions]
+        store.find((mission) => mission.mission_id === payload.payload).reserved = true;
       })
     }
   });

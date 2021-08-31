@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions } from './missionsSlice';
+import { getMissions, joinMission} from './missionsSlice';
+
 const Missions = () => {
 	const dispatch = useDispatch();
 	const { missions } = useSelector((state) => state).missions;
 	console.log(missions);
+	const handleJoinMission = (id) => {
+		console.log(missions);
+		dispatch(joinMission(id))
+	}
 	useEffect(() => {
 		dispatch(getMissions());
 	}, [dispatch]);
@@ -31,7 +36,7 @@ const Missions = () => {
 								<span>Not a member</span>
 							</td>
 							<td>
-								<button>Join Mission</button>
+								<button onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</button>
 							</td>
 						</tr>
 						))
