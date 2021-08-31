@@ -4,7 +4,7 @@ import axios from 'axios';
 export const getMissions = createAsyncThunk('/missions/getMissions', async () => {
     const { data } = await axios.get('https://api.spacexdata.com/v3/missions');
       return data
-  });
+});
 
   const missionSlice =  createSlice({
     name: 'missons',
@@ -12,7 +12,6 @@ export const getMissions = createAsyncThunk('/missions/getMissions', async () =>
       missions: [],
       status: null,
     },
-    status: null,
     extraReducers: {
       [getMissions.pending]: (state) => {
         state.status = 'loading';

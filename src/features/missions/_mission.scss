@@ -1,6 +1,7 @@
 .missions-section {
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 6rem;
   .mission-table {
     border-collapse: collapse;
     width: 100%;
@@ -38,6 +39,9 @@
           font-size: 0.8rem;
           padding: 0.3rem 0.6rem;
         }
+      }
+      &:nth-child(2n+1) {
+        background-color: #f2f2f2;
       }
     }
   }
