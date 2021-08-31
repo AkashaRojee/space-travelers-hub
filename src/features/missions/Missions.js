@@ -6,16 +6,16 @@ const Missions = () => {
 	const dispatch = useDispatch();
 	const [joined, setjoined] = useState(false);
 	const { missions } = useSelector((state) => state).missions;
-	console.log(missions);
 	const handleJoinMission = (id) => {
 		if(!joined) {
+			setjoined(true);
 			dispatch(joinMission(id));
 		} else {
 			dispatch(leaveMission(id));
+			setjoined(false);
 		}
-		setjoined(!joined);
-		console.log(missions);
 	}
+	console.log(missions);
 	useEffect(() => {
 		dispatch(getMissions());
 	}, [dispatch]);
