@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: scroll;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  height: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+  background: white;
+
+  img {
+    height: 50px;
+  }
+
+  h1 {
+    margin-right: auto;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+    
+    a {
+      text-decoration: none;
+    }
+
+    .active{
+      text-decoration: underline;
+    } 
+  }
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+ul {
+  list-style-type: none
+}
+img{
+  max-width: 100%;
+}
+a {
+  text-decoration:  none;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex
+}
+.space-between {
+  justify-content: space-between
+}
+.cross-center {
+  align-items: center;
+}
+.gap-1 {
+  gap: 1rem
+}
+.gap-2 {
+  gap: 2rem
+}
+.gap-3 {
+  gap: 3rem
+}
+
+.header{
+  padding: 2em 0;
+  border: 1px solid black;
+  margin-bottom: 3rem;
+  font-family: 'Oswald', sans-serif;
+}
+.nav-bar {
+  letter-spacing: 2px;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: black;
+}
+
+.logo{
+  width: 20%;
+
+}
+
+*/

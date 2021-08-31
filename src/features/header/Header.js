@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo  from './assets/image/planet.svg';
-import './header.css'
+import './header.scss'
 
 const linkList = [
   { id: 1, name: 'Rockets', to: '/'},
@@ -12,21 +12,14 @@ const linkList = [
 
 const Header = () => {
   return (
-    <header class='header'>
-      <div class='container flex  space-between cross-center gap-2 '>
-        <img src={logo} alt="logo" class='logo' />
-        <nav className="nav-bar container ">
-          <ul className="nav-list flex  cross-center gap-3">
-            {
-              linkList.map(({ id, name, to }) => (
-            <li key={id} className="nav-link">
-              <NavLink activeClassName='active' exact={true} to={to}>{name}</NavLink>
-            </li>
-              ))
-            }
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <img src={logo} alt="Space Travelers' Hub Logo" />
+      <h1>Space Travelers' Hub</h1>
+      <nav>
+        {linkList.map(({ id, name, to }) => (
+          <NavLink key={id} activeClassName='active' exact={true} to={to}>{name}</NavLink>
+        ))}
+      </nav>
     </header>
   );
 };
