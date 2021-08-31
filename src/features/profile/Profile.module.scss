@@ -1,0 +1,14 @@
+.profiles {
+  display: flex;
+  flex-direction: row;
+  
+  .dragons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .missions {
+    display: flex;
+    flex-direction: column;
+  }
+}
