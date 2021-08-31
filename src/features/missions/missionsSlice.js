@@ -30,6 +30,10 @@ const missionSlice =  createSlice({
         const store = [...state.missions]
         store.find((mission) => mission.mission_id === payload.payload).reserved = true;
       })
+      builder.addCase(leaveMission, (state, payload) => {
+        const store = [...state.missions]
+        store.find((mission) => mission.mission_id === payload.payload).reserved = false;
+      })
     }
   });
   
