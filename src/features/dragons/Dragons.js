@@ -1,7 +1,6 @@
 import React from 'react';
 import './Dragons.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { StaticRouter } from 'react-router';
 import Dragon from './Dragon';
 import * as dragonActions from './store/dragonsSlice';
 
