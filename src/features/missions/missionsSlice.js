@@ -12,17 +12,17 @@ export const getMissions = createAsyncThunk('/missions/getMissions', async () =>
       missions: [],
       status: null,
     },
-    extraReducers: {
-      [getMissions.pending]: (state) => {
+    extraReducers:(builder) => {
+      builder.addCase(getMissions.pending, (state) => {
         state.status = 'loading';
-      },
-      [getMissions.fulfilled]: (state, { payload }) => {
-        state.missions = payload;
-        state.status = 'sucess';
-      },
-      [getMissions.rejected]: (state) => {
+      } )
+      builder.addCase(getMissions.fulfilled, (state, payload) => {
+        state.missions = payload.payload;
+        state.status = 'success';
+      } )
+      builder.addCase(getMissions.rejected, (state) => {
         state.status = 'failed';
-      },
+      })
     }
   });
   
