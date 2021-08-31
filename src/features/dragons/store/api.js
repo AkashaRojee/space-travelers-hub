@@ -1,7 +1,7 @@
 // ACTION TYPES
-const API_REQUESTED = 'api/requested';
-const API_CALL_SUCCESS = 'api/success';
-const API_CALL_FAIL = 'api/fail';
+export const API_REQUESTED = 'api/requested';
+export const API_CALL_SUCCESS = 'api/success';
+export const API_CALL_FAIL = 'api/fail';
 
 // ACTION CREATORS
 
