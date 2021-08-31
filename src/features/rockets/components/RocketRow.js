@@ -23,6 +23,8 @@ const RocketRow = ({id, title, description, image, reserved}) => {
     
   };
 
+  const buttonStyle = reserved ? styles.cancel : styles.reserve;
+
   return (
     <SplitPane
       layout={
@@ -41,7 +43,13 @@ const RocketRow = ({id, title, description, image, reserved}) => {
           </div>
           <span>{description}</span>
           <div className={styles['row-button']}>
-            <button type='button' onClick={handleClick}>{buttonText}</button>
+            <button
+              className={buttonStyle}
+              type='button'
+              onClick={handleClick}
+            >
+              {buttonText}
+            </button>
           </div>
         </>
       }
