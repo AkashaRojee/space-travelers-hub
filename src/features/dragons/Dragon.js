@@ -4,12 +4,12 @@ import * as dragonActions from './store/dragonsSlice';
 const Dragon = ({ data: dragonInfo }) => {
   const dispatch = useDispatch();
   const {
-    name, type, isReserved, img,
+    name, type, isReserved, imgSrc,
   } = dragonInfo;
   return (
     <div className="card">
       <div className="container flex gap-2">
-        <img src={img} alt="" className="card__img" />
+        <img src={imgSrc} alt="" className="card__img" />
         <div className="card__text flex portrait gap-1">
           <h4 className="card__heading no-stretch">
             {isReserved ? (
@@ -31,12 +31,6 @@ const Dragon = ({ data: dragonInfo }) => {
           </button>
         </div>
       </div>
-      <button
-        type="button"
-        onClick={() => dispatch(dragonActions.loadDragons())}
-      >
-        STORE
-      </button>
     </div>
   );
 };
