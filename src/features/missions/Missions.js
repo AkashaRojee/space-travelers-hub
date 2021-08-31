@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import TableHeader from '../../app/common/tableHeader';
+import TableBody from '../../app/common/tableBody';
 import { getMissions, joinMission, leaveMission } from './missionsSlice';
 
 const Missions = () => {
@@ -20,24 +21,7 @@ const Missions = () => {
 		<section className='missions-section'>
 			<table className="mission-table">
 				<TableHeader />
-				<tbody>
-					{
-						missions.map((mission) => (
-							<tr key={mission.mission_id}>
-							<td>{mission.mission_name}</td>
-							<td>
-								{mission.description}
-							</td>
-							<td>
-								<span className={`${ mission.joined ? 'joined' : ''}`} >{!mission.joined ? 'NOT A MEMBER': 'Active Member' }</span>
-							</td>
-							<td>
-								<button className={`${ mission.joined ? 'joined' : ''}`} onClick={() => handleJoinMission(mission.mission_id, mission.joined )}>{!mission.joined ? 'Join Mission' : 'leave Mission' }</button>
-							</td>
-						</tr>
-						))
-					}
-        </tbody>
+				<TableBody onJoinMission={handleJoinMission} missions={missions}/>
 			</table>
 		</section>
 	);
