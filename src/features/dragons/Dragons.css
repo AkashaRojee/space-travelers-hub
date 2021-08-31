@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin-top: 2rem;
+  font-family: "Oswald", sans-serif;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+button {
+  line-height: 1.15;
+  outline: none;
+  font: inherit;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+.portrait {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.cross-center {
+  align-items: center;
+}
+.no-stretch {
+  align-self: flex-start;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+.btn {
+  padding: 0.3em 0.4em;
+  border-radius: 4px;
+  outline: none;
+  background: transparent;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn--reserved {
+  background: none;
+  color: rgb(182, 186, 190);
+  border: 0.1px solid rgb(182, 186, 190);
+}
+.btn--un-reserved {
+  border: none;
+  color: white;
+  background-color: rgb(0, 124, 249);
+}
+.label {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+
+  letter-spacing: 1px;
+  font-weight: 100;
+  padding: 0.15em 1em;
+  border-radius: 10px;
+}
+.label--reserved {
+  background-color: rgb(0, 163, 183);
+  color: white;
+  display: block;
+  width: 80%;
+}
+.container {
+  width: min(80%, 800px);
+  margin: 0 auto;
+}
+.card {
+  padding: 2em 0;
+  border: 2px solid rgb(0, 124, 249);
+  border-radius: 10px;
+  _max-height: 220px;
+}
+.card + .card {
+  margin-top: 2rem;
+}
+.card__img {
+  width: 33%;
+}
+.card__text {
+  font-size: clamp(1rem, 1.25vw, 2rem);
+  letter-spacing: 1px;
+}
+.card__heading {
+  color: red;
+  letter-spacing: 8px;
+  font-weight: 300;
+  font-size: clamp(2rem, 2.5vw, 4rem);
+}
