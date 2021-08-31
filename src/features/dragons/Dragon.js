@@ -1,34 +1,24 @@
-import { useDispatch } from 'react-redux';
-import * as dragonActions from './store/dragonsSlice';
+import CardBtn from './CardBtn';
 
 const Dragon = ({ data: dragonInfo }) => {
-  const dispatch = useDispatch();
-  const {
-    name, type, isReserved, imgSrc,
-  } = dragonInfo;
+  const { id, name, type, isReserved, imgSrc } = dragonInfo;
+
   return (
     <div className="card">
       <div className="container flex gap-2">
         <img src={imgSrc} alt="" className="card__img" />
         <div className="card__text flex portrait gap-1">
           <h4 className="card__heading no-stretch">
-            {isReserved ? (
+            {isReserved && (
               <span className="label label--reserved txt-center">Reserved</span>
-            ) : null}
+            )}
             {name}
           </h4>
           <p>
             type:
             {type}
           </p>
-          <button
-            type="button"
-            className={`btn no-stretch ${
-              isReserved ? 'btn--reserved' : 'btn--un-reserved'
-            }`}
-          >
-            {isReserved ? 'Cancel Reservation' : 'Reserve Dragon'}
-          </button>
+          <CardBtn status={isReserved} cardId={id} />
         </div>
       </div>
     </div>

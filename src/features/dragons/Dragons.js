@@ -7,7 +7,7 @@ import * as dragonActions from './store/dragonsSlice';
 
 const Dragons = () => {
   const { list: dragonsList, isLoading } = useSelector(
-    (state) => state.dragons,
+    (state) => state.dragons
   );
   const dispatch = useDispatch();
   React.useEffect(() => {

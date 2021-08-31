@@ -18,7 +18,7 @@ export const reserveDragon = (id) => ({
   payload: { id },
 });
 export const unReserveDragon = (id) => ({
-  type: DRAGON_RESERVED,
+  type: DRAGON_UNRESERVED,
   payload: { id },
 });
 
