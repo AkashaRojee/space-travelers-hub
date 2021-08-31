@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
+
 .container {
   width: 80%;
   max-width: 900px;
@@ -84,7 +88,7 @@ a {
   text-align: left;
 }
 .missions-section .mission-table thead tr th {
-  padding: 1rem;
+  padding: 0.5rem;
   border: 1px solid #c7c7c7;
 }
 .missions-section .mission-table tbody tr {
@@ -93,6 +97,27 @@ a {
 .missions-section .mission-table tbody tr td {
   padding: 1rem;
   border: 1px solid #c7c7c7;
+}
+.missions-section .mission-table tbody tr td:last-child {
+  width: 15%;
+  text-align: center;
+}
+.missions-section .mission-table tbody tr td:nth-child(3) {
+  text-align: center;
+  width: 15%;
+}
+.missions-section .mission-table tbody tr td span {
+  padding: 0.3rem;
+  background-color: #6d757d;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.missions-section .mission-table tbody tr td button {
+  border: 1px solid #6d757d;
+  color: #6d757d;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
 }
 
 .App {
