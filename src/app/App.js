@@ -4,12 +4,13 @@ import Rockets from "../features/rockets/Rockets";
 import Dragons from "../features/dragons/Dragons";
 import Missions from "../features/missions/Missions";
 import Profile from "../features/profile/Profile";
+import './scss/styles.scss';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header />
+      <Header />
+      <main>
         <Switch>
           <Route exact path='/'>
             <Rockets />
@@ -24,7 +25,7 @@ function App() {
             <Profile />
           </Route>
         </Switch>
-      </div>
+      </main>
     </BrowserRouter>
   );
 }

@@ -12,6 +12,14 @@ const Profiles = () => {
         columnTitle='My Rockets'
         reservedItems = {rockets.filter((rocket) => rocket.reserved === true)}
       />
+      <ProfileColumn
+        columnTitle='My Dragons'
+        reservedItems = {rockets.filter((rocket) => rocket.reserved === true)}
+      />
+      <ProfileColumn
+        columnTitle='My Missions'
+        reservedItems = {rockets.filter((rocket) => rocket.reserved === true)}
+      />
     </div>
   );
 
