@@ -1,9 +1,11 @@
 const Dragon = ({ data: dragonInfo }) => {
-  const { name, type, isReserved, flickr_images } = dragonInfo;
+  const {
+    name, type, isReserved, img,
+  } = dragonInfo;
   return (
     <div className="card">
       <div className="container flex gap-2">
-        <img src={flickr_images} alt="" className="card__img" />
+        <img src={img} alt="" className="card__img" />
         <div className="card__text flex portrait gap-1">
           <h4 className="card__heading no-stretch">
             {isReserved ? (
@@ -11,13 +13,17 @@ const Dragon = ({ data: dragonInfo }) => {
             ) : null}
             {name}
           </h4>
-          <p>type: {type}</p>
+          <p>
+            type:
+            {type}
+          </p>
           <button
+            type="button"
             className={`btn no-stretch ${
-              isReserved ? "btn--reserved" : "btn--un-reserved"
+              isReserved ? 'btn--reserved' : 'btn--un-reserved'
             }`}
           >
-            {isReserved ? "Cancel Reservation" : "Reserve Dragon"}
+            {isReserved ? 'Cancel Reservation' : 'Reserve Dragon'}
           </button>
         </div>
       </div>
