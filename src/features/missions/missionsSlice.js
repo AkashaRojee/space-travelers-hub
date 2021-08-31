@@ -7,7 +7,7 @@ export const getMissions = createAsyncThunk('/missions/getMissions', async () =>
 });
 
 export const joinMission = createAction('joinMission');
-export const leaveMission = createAction('joinMission');
+export const leaveMission = createAction('leaveMission');
 
 const missionSlice =  createSlice({
     name: 'missons',
