@@ -11,6 +11,7 @@ body {
 }
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 button {
   line-height: 1.15;
@@ -88,6 +89,7 @@ button {
   padding: 2em 0;
   border: 2px solid rgb(0, 124, 249);
   border-radius: 10px;
+  _max-height: 220px;
 }
 .card + .card {
   margin-top: 2rem;
