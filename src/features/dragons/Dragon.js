@@ -3,7 +3,9 @@ import * as dragonActions from './store/dragonsSlice';
 
 const Dragon = ({ data: dragonInfo }) => {
   const dispatch = useDispatch();
-  const { name, type, isReserved, imgSrc } = dragonInfo;
+  const {
+    name, type, isReserved, imgSrc,
+  } = dragonInfo;
   return (
     <div className="card">
       <div className="container flex gap-2">
