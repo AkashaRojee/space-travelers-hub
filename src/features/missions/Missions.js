@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import TableHeader from '../../app/common/tableHeader';
 import { getMissions, joinMission, leaveMission } from './missionsSlice';
 
 const Missions = () => {
@@ -18,14 +19,7 @@ const Missions = () => {
 	return (
 		<section className='missions-section'>
 			<table className="mission-table">
-				<thead>
-					<tr>
-						<th>Missions</th>
-						<th>Descripition</th>
-						<th>Status</th>
-						<th></th>
-					</tr>
-				</thead>
+				<TableHeader />
 				<tbody>
 					{
 						missions.map((mission) => (
