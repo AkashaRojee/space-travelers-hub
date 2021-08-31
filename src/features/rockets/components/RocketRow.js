@@ -35,9 +35,14 @@ const RocketRow = ({id, title, description, image, reserved}) => {
       }
       second={
         <>
-          <span>{reserved && 'Reserved'} {title}</span>
+          <div className={styles['row-heading']}>
+            <span>{reserved && 'Reserved'}</span>
+            <h2>{title}</h2>
+          </div>
           <span>{description}</span>
-          <div><button type='button' onClick={handleClick}>{buttonText}</button></div>
+          <div className={styles['row-button']}>
+            <button type='button' onClick={handleClick}>{buttonText}</button>
+          </div>
         </>
       }
     />

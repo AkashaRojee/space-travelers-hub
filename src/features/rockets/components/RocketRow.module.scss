@@ -1,12 +1,35 @@
 .pane {
 
+  gap: 25px;
+
   .first {
     img {
-      height: 100px;
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
     }
   }
 
   .second {
-    
+    gap: 10px;
+
+    .row-heading {
+      display: flex;
+      align-items: center;
+    }
+
+    .row-button {
+      margin-top: auto;
+      margin-bottom: 10px;
+
+      button {
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+      }
+    }
   }
 }
