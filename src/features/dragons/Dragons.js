@@ -1,23 +1,19 @@
+import React from 'react';
 import Dragon from './Dragon';
+import * as dragonActions from './store/dragonsSlice';
 import './Dragons.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { StaticRouter } from 'react-router';
 
 const Dragons = () => {
-  const dragonsList = [
-    {
-      id: 1,
-      name: 'Dragon 2',
-      type: 'capsule',
-      img: 'https://farm8.staticflickr.com/7647/16581815487_6d56cb32e1_b.jpg',
-      isReserved: true,
-    },
-    {
-      id: 2,
-      name: 'Dragon 7',
-      type: 'capsule',
-      img: 'https://farm8.staticflickr.com/7647/16581815487_6d56cb32e1_b.jpg',
-      isReserved: false,
-    },
-  ];
+  const { list: dragonsList, isLoading } = useSelector(
+    (state) => state.dragons
+  );
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(dragonActions.loadDragons());
+  }, []);
+
   return (
     <div className="container">
       {dragonsList.map((dragon) => (

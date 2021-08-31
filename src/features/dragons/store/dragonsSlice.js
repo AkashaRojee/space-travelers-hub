@@ -7,15 +7,16 @@ const DRAGON_RESERVED = 'dragon/:id/reserve';
 const DRAGON_UNRESERVED = 'dragon/:id/unreserve';
 
 // ACTION CREATORS
-export const loadDragons = () => apiActions.requestAPICall({
-  url: 'https://api.spacexdata.com/v3/dragons',
-  onStart: DRAGONS_REQUESTED,
-  onSuccess: DRAGONS_LOADED,
-});
+export const loadDragons = () =>
+  apiActions.requestAPICall({
+    url: 'https://api.spacexdata.com/v3/dragons',
+    onStart: DRAGONS_REQUESTED,
+    onSuccess: DRAGONS_LOADED,
+  });
 // REDUCER
 const initialState = {
   list: [],
-  loading: false,
+  isLoading: false,
 };
 const reducer = (state = initialState, action) => {
   const { type, payload } = action;
@@ -24,9 +25,7 @@ const reducer = (state = initialState, action) => {
     return {
       ...state,
       loading: false,
-      list: payload.map(({
-        id, name, type, flickr_images: [imgSrc],
-      }) => ({
+      list: payload.map(({ id, name, type, flickr_images: [imgSrc] }) => ({
         id,
         name,
         type,
