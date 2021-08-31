@@ -1,7 +1,9 @@
 import CardBtn from './CardBtn';
 
 const Dragon = ({ data: dragonInfo }) => {
-  const { id, name, type, isReserved, imgSrc } = dragonInfo;
+  const {
+    id, name, type, isReserved, imgSrc,
+  } = dragonInfo;
 
   return (
     <div className="card">

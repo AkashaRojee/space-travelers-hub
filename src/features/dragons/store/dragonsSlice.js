@@ -14,12 +14,12 @@ export const loadDragons = () => (dispatch, getState) => {
   return lastFetched
     ? getState()
     : dispatch(
-        apiActions.requestAPICall({
-          url: 'https://api.spacexdata.com/v3/dragons',
-          onStart: DRAGONS_REQUESTED,
-          onSuccess: DRAGONS_LOADED,
-        })
-      );
+      apiActions.requestAPICall({
+        url: 'https://api.spacexdata.com/v3/dragons',
+        onStart: DRAGONS_REQUESTED,
+        onSuccess: DRAGONS_LOADED,
+      }),
+    );
 };
 export const reserveDragon = (id) => ({
   type: DRAGON_RESERVED,
@@ -44,7 +44,9 @@ const reducer = (state = initialState, action) => {
       ...state,
       lastFetched: Date.now(),
       isLoading: false,
-      list: payload.map(({ id, name, type, flickr_images: [imgSrc] }) => ({
+      list: payload.map(({
+        id, name, type, flickr_images: [imgSrc],
+      }) => ({
         id,
         name,
         type,
@@ -56,17 +58,13 @@ const reducer = (state = initialState, action) => {
   if (type === DRAGON_RESERVED) {
     return {
       ...state,
-      list: state.list.map((dragon) =>
-        dragon.id === payload.id ? { ...dragon, isReserved: true } : dragon
-      ),
+      list: state.list.map((dragon) => (dragon.id === payload.id ? { ...dragon, isReserved: true } : dragon)),
     };
   }
   if (type === DRAGON_UNRESERVED) {
     return {
       ...state,
-      list: state.list.map((dragon) =>
-        dragon.id === payload.id ? { ...dragon, isReserved: false } : dragon
-      ),
+      list: state.list.map((dragon) => (dragon.id === payload.id ? { ...dragon, isReserved: false } : dragon)),
     };
   }
   return state;

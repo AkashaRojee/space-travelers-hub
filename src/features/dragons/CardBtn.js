@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import * as dragonActions from './store/dragonsSlice';
 
 const CardBtn = ({ status: isReserved, cardId: id }) => {
@@ -21,3 +22,8 @@ const CardBtn = ({ status: isReserved, cardId: id }) => {
 };
 
 export default CardBtn;
+
+CardBtn.propTypes = {
+  status: PropTypes.bool.isRequired,
+  cardId: PropTypes.string.isRequired,
+};
