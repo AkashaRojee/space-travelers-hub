@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import * as apiActions from './api';
 
 // ACTION TYPES
@@ -59,13 +58,17 @@ const reducer = (state = initialState, action) => {
   if (type === DRAGON_RESERVED) {
     return {
       ...state,
-      list: state.list.map((dragon) => (dragon.id === payload.id ? { ...dragon, isReserved: true } : dragon)),
+      list: state.list.map((dragon) => (dragon.id === payload.id
+        ? { ...dragon, isReserved: true }
+        : dragon)),
     };
   }
   if (type === DRAGON_UNRESERVED) {
     return {
       ...state,
-      list: state.list.map((dragon) => (dragon.id === payload.id ? { ...dragon, isReserved: false } : dragon)),
+      list: state.list.map((dragon) => (dragon.id === payload.id
+        ? { ...dragon, isReserved: false }
+        : dragon)),
     };
   }
   return state;
