@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getRockets } from './rocketSlice';
-import RDRow from '../../common/components/RDRow/RDRow';
-import styles from './Rockets.module.scss';
+import { getRockets, reserve, cancel } from './rocketSlice';
+
+const RDRow = React.lazy(() => import('../../common/components/RDRow/RDRow'));
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
@@ -16,20 +16,23 @@ const Rockets = () => {
   );
 
   return (
-    <div className={styles.rockets}>
-      { rockets.map(({
-        id, title, description, image, reserved = false,
-      }) => (
-        <RDRow
-          key={id}
-          id={id}
-          title={title}
-          description={description}
-          image={image}
-          reserved={reserved}
-        />
-      ))}
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="rd-rows">
+        { rockets.map(({
+          id, title, description, image, reserved = false,
+        }) => (
+          <RDRow
+            key={id}
+            id={id}
+            title={title}
+            description={description}
+            image={image}
+            reserved={reserved}
+            actions={{ reserve, cancel }}
+          />
+        ))}
+      </div>
+    </Suspense>
   );
 };
 

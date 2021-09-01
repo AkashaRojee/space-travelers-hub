@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserve, cancel } from '../../../features/rockets/rocketSlice';
+
 import styles from './RDRow.module.scss';
 
 const RDRow = ({
-  id, title, description, image, reserved,
+  id, title, description, image, reserved, actions: { reserve, cancel },
 }) => {
   const [buttonText, setButtonText] = useState(reserved ? 'Cancel' : 'Reserve');
 
@@ -59,6 +59,10 @@ RDRow.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   reserved: PropTypes.bool.isRequired,
+  actions: PropTypes.shape({
+    reserve: PropTypes.func.isRequired,
+    cancel: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 export default RDRow;
