@@ -1,10 +1,10 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import SplitPane from '../../../common/SplitPane/SplitPane';
-import SplitPaneLayout from '../../../common/SplitPane/SplitPaneLayout';
-import styles from './RocketRow.module.scss';
-import { reserve, cancel } from '../rocketSlice';
 import { useDispatch } from 'react-redux';
+import SplitPane from '../../common/SplitPane/SplitPane';
+import SplitPaneLayout from '../../common/SplitPane/SplitPaneLayout';
+import styles from './RocketRow.module.scss';
+import { reserve, cancel } from './rocketSlice';
 
 const RocketRow = ({id, title, description, image, reserved}) => {
 
