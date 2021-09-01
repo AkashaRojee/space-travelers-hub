@@ -8,12 +8,8 @@ import './mission.scss';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions } = useSelector((state) => state).missions;
-  const handleJoinMission = (id, joined) => {
-    if (!joined) {
-      dispatch(joinMission(id));
-    } else {
-      dispatch(leaveMission(id));
-    }
+  const handleMission = (id, joined) => {
+    dispatch(joined ? leaveMission(id) : joinMission(id));
   };
   useEffect(() => {
     dispatch(getMissions());
@@ -22,7 +18,7 @@ const Missions = () => {
     <section className="missions-section">
       <table className="mission-table">
         <TableHeader />
-        <TableBody onJoinMission={handleJoinMission} missions={missions} />
+        <TableBody onJoinMission={handleMission} missions={missions} />
       </table>
     </section>
   );
