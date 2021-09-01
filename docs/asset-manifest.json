@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd608320.chunk.css",
-    "main.js": "/static/js/main.9843114d.chunk.js",
-    "main.js.map": "/static/js/main.9843114d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f8c50ce9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f8c50ce9.js.map",
-    "static/js/2.e86e8194.chunk.js": "/static/js/2.e86e8194.chunk.js",
-    "static/js/2.e86e8194.chunk.js.map": "/static/js/2.e86e8194.chunk.js.map",
-    "static/js/3.65e4c10b.chunk.js": "/static/js/3.65e4c10b.chunk.js",
-    "static/js/3.65e4c10b.chunk.js.map": "/static/js/3.65e4c10b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.fd608320.chunk.css.map": "/static/css/main.fd608320.chunk.css.map",
-    "static/js/2.e86e8194.chunk.js.LICENSE.txt": "/static/js/2.e86e8194.chunk.js.LICENSE.txt",
-    "static/media/planet.a63017b2.svg": "/static/media/planet.a63017b2.svg"
+    "main.css": "/space-travelers-hub/static/css/main.fd608320.chunk.css",
+    "main.js": "/space-travelers-hub/static/js/main.9843114d.chunk.js",
+    "main.js.map": "/space-travelers-hub/static/js/main.9843114d.chunk.js.map",
+    "runtime-main.js": "/space-travelers-hub/static/js/runtime-main.5153e1cc.js",
+    "runtime-main.js.map": "/space-travelers-hub/static/js/runtime-main.5153e1cc.js.map",
+    "static/js/2.e86e8194.chunk.js": "/space-travelers-hub/static/js/2.e86e8194.chunk.js",
+    "static/js/2.e86e8194.chunk.js.map": "/space-travelers-hub/static/js/2.e86e8194.chunk.js.map",
+    "static/js/3.65e4c10b.chunk.js": "/space-travelers-hub/static/js/3.65e4c10b.chunk.js",
+    "static/js/3.65e4c10b.chunk.js.map": "/space-travelers-hub/static/js/3.65e4c10b.chunk.js.map",
+    "index.html": "/space-travelers-hub/index.html",
+    "static/css/main.fd608320.chunk.css.map": "/space-travelers-hub/static/css/main.fd608320.chunk.css.map",
+    "static/js/2.e86e8194.chunk.js.LICENSE.txt": "/space-travelers-hub/static/js/2.e86e8194.chunk.js.LICENSE.txt",
+    "static/media/planet.a63017b2.svg": "/space-travelers-hub/static/media/planet.a63017b2.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8c50ce9.js",
+    "static/js/runtime-main.5153e1cc.js",
     "static/js/2.e86e8194.chunk.js",
     "static/css/main.fd608320.chunk.css",
     "static/js/main.9843114d.chunk.js"
