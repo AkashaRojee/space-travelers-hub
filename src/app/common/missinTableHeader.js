@@ -1,16 +1,14 @@
 import React from 'react';
 
-const TableHeader = () => {
-  return (
-    <thead>
+const TableHeader = () => (
+  <thead>
     <tr>
       <th>Missions</th>
       <th>Descripition</th>
       <th>Status</th>
-      <th></th>
+      <th />
     </tr>
   </thead>
-  );
-};
+);
 
 export default TableHeader;
