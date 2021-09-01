@@ -1,0 +1,7 @@
+@import '../../app/scss/flex';
+
+.rockets {
+  @extend %flex-col;
+
+  gap: 25px;
+}
