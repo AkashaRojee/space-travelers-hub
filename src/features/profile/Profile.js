@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import styles from './Profile.module.scss';
 import ProfileColumn from './ProfileColumn';
 
 const Profiles = () => {
@@ -7,7 +6,7 @@ const Profiles = () => {
   const { list: dragonsList } = useSelector((state) => state.dragons);
 
   return (
-    <div className={styles.profiles}>
+    <div className="profiles">
       <ProfileColumn
         columnTitle="My Rockets"
         reservedItems={rockets.filter((rocket) => rocket.reserved === true)}

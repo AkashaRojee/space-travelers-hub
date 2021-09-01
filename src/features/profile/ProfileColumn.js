@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ProfileColumn.module.scss';
 
 const ProfileColumn = ({ columnTitle, reservedItems }) => (
-  <div className={styles['profile-column']}>
+  <div className="profile-column">
     <h2>{columnTitle}</h2>
     <ul>
       { reservedItems.map(({ title }) => (

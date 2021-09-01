@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from './assets/image/planet.svg';
-import styles from './Header.module.scss';
 
 const linkList = [
   { id: 1, name: 'Rockets', to: '/' },
@@ -16,7 +15,7 @@ const Header = () => (
     <h1>Space Travelers&apos; Hub</h1>
     <nav>
       {linkList.map(({ id, name, to }) => (
-        <NavLink key={id} activeClassName={styles.active} exact to={to}>{name}</NavLink>
+        <NavLink key={id} activeClassName="active" exact to={to}>{name}</NavLink>
       ))}
     </nav>
   </header>
