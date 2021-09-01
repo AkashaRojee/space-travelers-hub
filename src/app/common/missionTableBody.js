@@ -25,7 +25,7 @@ const TableBody = ({ missions, onJoinMission }) => (
 );
 
 TableBody.propTypes = {
-  missions: propTypes.arrayOf(propTypes.string).isRequired,
+  missions: propTypes.arrayOf(propTypes.any).isRequired,
   onJoinMission: propTypes.func.isRequired,
 };
 export default TableBody;
