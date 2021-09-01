@@ -1,9 +1,9 @@
-import Header from "../features/header/Header";
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Rockets from "../features/rockets/Rockets";
-import Dragons from "../features/dragons/Dragons";
-import Missions from "../features/missions/Missions";
-import Profile from "../features/profile/Profile";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Header from '../features/header/Header';
+import Rockets from '../features/rockets/Rockets';
+import Dragons from '../features/dragons/Dragons';
+import Missions from '../features/missions/Missions';
+import Profile from '../features/profile/Profile';
 import './scss/styles.scss';
 
 function App() {
@@ -12,16 +12,16 @@ function App() {
       <Header />
       <main>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Rockets />
           </Route>
-          <Route path='/dragons'>
+          <Route path="/dragons">
             <Dragons />
           </Route>
-          <Route path='/missions'>
+          <Route path="/missions">
             <Missions />
           </Route>
-          <Route path='/profile'>
+          <Route path="/profile">
             <Profile />
           </Route>
         </Switch>

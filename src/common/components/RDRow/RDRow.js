@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { reserve, cancel } from '../../../features/rockets/rocketSlice';
 import styles from './RDRow.module.scss';
 
-const RDRow = ({id, title, description, image, reserved}) => {
-
-  const [ buttonText, setButtonText ] = useState(reserved ? 'Cancel' : 'Reserve');
+const RDRow = ({
+  id, title, description, image, reserved,
+}) => {
+  const [buttonText, setButtonText] = useState(reserved ? 'Cancel' : 'Reserve');
 
   const dispatch = useDispatch();
 
   const handleClick = () => {
     if (reserved) {
       dispatch(cancel(id));
-      setButtonText((state) => 'Reserve');
+      setButtonText('Reserve');
     } else {
       dispatch(reserve(id));
-      setButtonText((state) => 'Cancel');
+      setButtonText('Cancel');
     }
   };
 
@@ -24,7 +26,7 @@ const RDRow = ({id, title, description, image, reserved}) => {
     <div className={styles['rd-row']}>
 
       <div className={styles['rd-image']}>
-        <img src={image} alt={title}/>
+        <img src={image} alt={title} />
       </div>
 
       <div className={styles['rd-details']}>
@@ -39,7 +41,7 @@ const RDRow = ({id, title, description, image, reserved}) => {
         <div className={styles['rd-button']}>
           <button
             className={reserved && styles.cancel}
-            type='button'
+            type="button"
             onClick={handleClick}
           >
             {buttonText}
@@ -49,7 +51,14 @@ const RDRow = ({id, title, description, image, reserved}) => {
       </div>
     </div>
   );
+};
 
-}
+RDRow.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+};
 
 export default RDRow;
