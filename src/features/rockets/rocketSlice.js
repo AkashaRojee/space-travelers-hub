@@ -27,7 +27,7 @@ export const rocketSlice = createSlice({
         });
     },
     reserve: (state, action) => {
-      state.find((rocket) => rocket.id == action.payload).reserved = true;
+      state.find((rocket) => rocket.id === action.payload).reserved = true;
     },
     cancel: (state, action) => {
       state.find((rocket) => rocket.id === action.payload).reserved = false;
