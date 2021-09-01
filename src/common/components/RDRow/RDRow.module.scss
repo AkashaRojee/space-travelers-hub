@@ -2,6 +2,7 @@
 
 .rd-row {
   @extend %flex-row;
+
   gap: 25px;
 
   .rd-image {
@@ -16,12 +17,13 @@
 
   .rd-details {
     @extend %flex-col;
+
     gap: 10px;
 
     .rd-heading {
       @extend %flex-row;
       @extend %align-center;
-      
+
       span {
         background-color: blue;
         color: white;
