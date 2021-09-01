@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import TableHeader from '../../app/common/missinTableHeader';
 import TableBody from '../../app/common/missionTableBody';
 import { getMissions, joinMission, leaveMission } from './missionsSlice';
-import './mission.css';
+import './mission.scss';
 
 const Missions = () => {
   const dispatch = useDispatch();
