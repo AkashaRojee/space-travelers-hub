@@ -4,17 +4,19 @@ import propTypes from 'prop-types';
 const TableBody = ({ missions, onJoinMission }) => (
   <tbody>
     {
-      missions.map((mission) => (
-        <tr key={mission.mission_id}>
-          <td>{mission.mission_name}</td>
+      missions.map(({
+        mission_id: id, mission_name: name, description, joined,
+      }) => (
+        <tr key={id}>
+          <td>{name}</td>
           <td>
-            {mission.description}
+            {description}
           </td>
           <td>
-            <span className={`${mission.joined ? 'joined' : ''}`}>{!mission.joined ? 'NOT A MEMBER' : 'Active Member' }</span>
+            <span className={`${joined ? 'joined' : ''}`}>{!joined ? 'NOT A MEMBER' : 'Active Member' }</span>
           </td>
           <td>
-            <button type="button" className={`${mission.joined ? 'joined' : ''}`} onClick={() => onJoinMission(mission.mission_id, mission.joined)}>{!mission.joined ? 'Join Mission' : 'leave Mission' }</button>
+            <button type="button" className={`${joined ? 'joined' : ''}`} onClick={() => onJoinMission(id, joined)}>{!joined ? 'Join Mission' : 'leave Mission' }</button>
           </td>
         </tr>
       ))
