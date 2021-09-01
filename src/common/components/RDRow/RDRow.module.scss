@@ -6,6 +6,7 @@
 
   .rd-image {
     @extend %flex-col;
+
     img {
       object-fit: cover;
       width: 150px;
@@ -24,9 +25,9 @@
       span {
         background-color: blue;
         color: white;
-        margin-right: 25px;
-        padding: 1px 2.5px;
         border-radius: 2.5px;
+        padding: 1px 2.5px;
+        margin-right: 25px;
       }
     }
 
@@ -35,11 +36,11 @@
       margin-bottom: 10px;
 
       button {
+        background-color: blue;
+        color: white;
         border-radius: 5px;
         padding: 10px;
         cursor: pointer;
-        background-color: blue;
-        color: white;
         border: none;
       }
 
