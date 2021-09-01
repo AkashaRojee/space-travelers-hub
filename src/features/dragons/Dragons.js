@@ -16,11 +16,11 @@ const Dragons = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="rd-rows">
-        {dragonsList.map(({id, name, type, isReserved, imgSrc }) => (
+        {dragonsList.map(({id, title, type, isReserved, imgSrc }) => (
           <RDRow
             key={id}
             id={id}
-            title={name}
+            title={title}
             description={`Type: ${type}`}
             image={imgSrc}
             reserved={isReserved}

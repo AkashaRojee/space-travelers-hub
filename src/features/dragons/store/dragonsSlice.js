@@ -49,7 +49,7 @@ const reducer = (state = initialState, action) => {
         id, name, type, flickr_images: [imgSrc],
       }) => ({
         id,
-        name,
+        title: name,
         type,
         imgSrc,
         isReserved: false,
