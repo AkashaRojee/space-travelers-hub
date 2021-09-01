@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadDragons, reserveDragon, unReserveDragon } from './store/dragonsSlice';
@@ -16,7 +15,9 @@ const Dragons = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="rd-rows">
-        {dragonsList.map(({id, title, type, isReserved, imgSrc }) => (
+        {dragonsList.map(({
+          id, title, type, isReserved, imgSrc,
+        }) => (
           <RDRow
             key={id}
             id={id}
