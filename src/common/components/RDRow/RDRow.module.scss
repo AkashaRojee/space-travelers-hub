@@ -1,8 +1,11 @@
-.pane {
+@import '../../../app/scss/flex';
 
+.rd-row {
+  @extend %flex-row;
   gap: 25px;
 
-  .first {
+  .rd-image {
+    @extend %flex-col;
     img {
       object-fit: cover;
       width: 150px;
@@ -10,12 +13,13 @@
     }
   }
 
-  .second {
+  .rd-details {
+    @extend %flex-col;
     gap: 10px;
 
-    .row-heading {
-      display: flex;
-      align-items: center;
+    .rd-heading {
+      @extend %flex-row;
+      @extend %align-center;
       
       span {
         background-color: blue;
@@ -26,7 +30,7 @@
       }
     }
 
-    .row-button {
+    .rd-button {
       margin-top: auto;
       margin-bottom: 10px;
 

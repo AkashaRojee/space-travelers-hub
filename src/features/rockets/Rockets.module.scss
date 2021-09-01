@@ -1,5 +1,6 @@
+@import '../../app/scss/flex';
+
 .rockets {
-  display: flex;
-  flex-direction: column;
+  @extend %flex-col;
   gap: 25px;
 }

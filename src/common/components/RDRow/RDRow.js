@@ -20,40 +20,39 @@ const RDRow = ({id, title, description, image, reserved}) => {
       dispatch(reserve(id));
       setButtonText((state) => 'Cancel');
     }
-    
   };
 
   const buttonStyle = reserved ? styles.cancel : styles.reserve;
 
   return (
-    <SplitPane
-      layout={
-        new SplitPaneLayout('row', 'col', 'col', styles)
-      }
-      first={
-        <>
-          <img src={image} />
-        </>
-      }
-      second={
-        <>
-          <div className={styles['row-heading']}>
-            {reserved && (<span>Reserved</span>)}
-            <h2>{title}</h2>
-          </div>
-          <span>{description}</span>
-          <div className={styles['row-button']}>
-            <button
-              className={buttonStyle}
-              type='button'
-              onClick={handleClick}
-            >
-              {buttonText}
-            </button>
-          </div>
-        </>
-      }
-    />
+
+    <div className={styles['rd-row']}>
+
+      <div className={styles['rd-image']}>
+        <img src={image} />
+      </div>
+
+      <div className={styles['rd-details']}>
+
+        <div className={styles['rd-heading']}>
+          {reserved && (<span>Reserved</span>)}
+          <h2>{title}</h2>
+        </div>
+
+        <span>{description}</span>
+
+        <div className={styles['rd-button']}>
+          <button
+            className={buttonStyle}
+            type='button'
+            onClick={handleClick}
+          >
+            {buttonText}
+          </button>
+        </div>
+
+      </div>
+    </div>
   );
 
 }
