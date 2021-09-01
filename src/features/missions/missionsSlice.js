@@ -19,20 +19,20 @@ const missionSlice = createSlice({
     builder.addCase(getMissions.pending, (state) => {
       state.status = 'loading';
     });
-    builder.addCase(getMissions.fulfilled, (state, payload) => {
-      state.missions = payload.payload;
+    builder.addCase(getMissions.fulfilled, (state, action) => {
+      state.missions = action.payload;
       state.status = 'success';
     });
     builder.addCase(getMissions.rejected, (state) => {
       state.status = 'failed';
     });
-    builder.addCase(joinMission, (state, payload) => {
+    builder.addCase(joinMission, (state, action) => {
       const missions = [...state.missions];
-      missions.find((mission) => mission.mission_id === payload.payload).joined = true;
+      missions.find((mission) => mission.mission_id === action.payload).joined = true;
     });
-    builder.addCase(leaveMission, (state, payload) => {
+    builder.addCase(leaveMission, (state, action) => {
       const missions = [...state.missions];
-      missions.find((mission) => mission.mission_id === payload.payload).joined = false;
+      missions.find((mission) => mission.mission_id === action.payload).joined = false;
     });
   },
 });
