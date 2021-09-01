@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo  from './planet.svg';
+import './header.css';
 
 const linkList = [
   { id: 1, name: 'Rockets', to: '/'},
