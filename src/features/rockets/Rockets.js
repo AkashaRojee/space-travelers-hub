@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRockets } from '../rockets/rocketSlice'
-import RocketRow from './RocketRow';
+import RDRow from '../../common/components/RDRow/RDRow';
 import styles from './Rockets.module.scss';
 
 const Rockets = () => {
@@ -19,7 +19,7 @@ const Rockets = () => {
   return (
     <div className={styles.rockets}>
       { rockets.map(({id, title, description, image, reserved = false}) => (
-        <RocketRow
+        <RDRow
           key={id}
           id={id}
           title={title}
