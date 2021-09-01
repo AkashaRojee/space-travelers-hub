@@ -1,0 +1,33 @@
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  height: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid grey;
+  background: white;
+
+  img {
+    height: 50px;
+  }
+
+  h1 {
+    margin-right: auto;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+    }
+
+    .active {
+      text-decoration: underline;
+    }
+  }
+}

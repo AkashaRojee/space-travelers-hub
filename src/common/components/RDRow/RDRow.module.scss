@@ -38,12 +38,13 @@
       margin-bottom: 10px;
 
       button {
+        font-family: inherit;
         background-color: blue;
         color: white;
         border-radius: 5px;
         padding: 10px;
         cursor: pointer;
-        border: none;
+        border: 1px solid blue;
       }
 
       .cancel {

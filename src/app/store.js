@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import rocketsReducer from '../features/rockets/rocketSlice';
+import rootReducer from './rootReducer';
+import api from '../features/dragons/store/middleware/api';
 
-export default configureStore({
-  reducer: {
-    rockets: rocketsReducer,
-  },
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api),
 });
+
+export default store;
