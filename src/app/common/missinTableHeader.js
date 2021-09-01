@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 
 const TableHeader = () => (
@@ -7,7 +6,7 @@ const TableHeader = () => (
       <th>Missions</th>
       <th>Descripition</th>
       <th>Status</th>
-      <th />
+      <th aria-label="Leave/Join Mission" />
     </tr>
   </thead>
 );
