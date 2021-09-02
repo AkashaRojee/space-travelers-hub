@@ -12,7 +12,7 @@ const TableBody = ({ missions, onJoinMission }) => (
             {description}
           </td>
           <td>
-            <span className={`${joined ? 'joined' : ''}`}>{!joined ? 'NOT A MEMBER' : 'Active Member' }</span>
+            <span title="badge" className={`${joined ? 'joined' : ''}`}>{!joined ? 'NOT A MEMBER' : 'Active Member' }</span>
           </td>
           <td>
             <button type="button" className={`${joined ? 'joined' : ''}`} onClick={() => onJoinMission(id, joined)}>{!joined ? 'Join Mission' : 'Leave Mission' }</button>
