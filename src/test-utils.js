@@ -2,13 +2,13 @@ import React from 'react'
 import { render as rtlRender } from '@testing-library/react'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
-import userReducer from '../features/rockets/rocketSlice'
+import rocketsReducer from './features/rockets/rocketSlice'
 
 function render(
   ui,
   {
     preloadedState,
-    store = configureStore({ reducer: { user: userReducer }, preloadedState }),
+    store = configureStore({ reducer: { rockets: rocketsReducer }, preloadedState }),
     ...renderOptions
   } = {}
 ) {
@@ -18,7 +18,6 @@ function render(
   return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
 }
 
-// re-export everything
 export * from '@testing-library/react'
-// override render method
+
 export { render }

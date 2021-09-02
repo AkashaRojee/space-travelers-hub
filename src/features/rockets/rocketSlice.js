@@ -31,6 +31,6 @@ export const rocketSlice = createSlice({
   },
 });
 
-export const { add, reserve, cancel } = rocketSlice.actions;
+export const { reserve, cancel } = rocketSlice.actions;
 
 export default rocketSlice.reducer;
