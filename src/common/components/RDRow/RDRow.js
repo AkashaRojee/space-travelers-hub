@@ -40,7 +40,7 @@ const RDRow = ({
 
         <div className={styles['rd-button']}>
           <button
-            className={reserved && styles.cancel}
+            className={reserved ? styles.cancel : undefined}
             type="button"
             onClick={handleClick}
           >

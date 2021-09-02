@@ -14,7 +14,7 @@ const ProfileColumn = ({ columnTitle, reservedItems }) => (
 
 ProfileColumn.propTypes = {
   columnTitle: PropTypes.string.isRequired,
-  reservedItems: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  reservedItems: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
 };
 
 export default ProfileColumn;
