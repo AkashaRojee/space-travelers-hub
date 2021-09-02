@@ -1,3 +1,4 @@
+import { fireEvent, render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import TableBody from '../../features/missions/TableBody';
 
@@ -14,8 +15,17 @@ const join = (id) => {
 };
 
 describe('Table body component', () => {
+  beforeEach(() => {
+    render(<TableBody missions={missions} onJoinMission={join} />);
+  });
   it('should match the snapshot', () => {
     const tree = renderer.create(<TableBody missions={missions} onJoinMission={join} />).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should change to leave mission', () => {
+    fireEvent.click(screen.getByText('Join Mission'));
+    const result = screen.getByTitle('badge');
+    expect(result.memoizedProps).not.toBe('NOT A MEMBER');
   });
 });
