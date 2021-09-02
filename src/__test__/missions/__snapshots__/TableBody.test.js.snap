@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table body component should match the snapshot 1`] = `
+<tbody>
+  <tr>
+    <td>
+      Thaicom
+    </td>
+    <td>
+      Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.
+    </td>
+    <td>
+      <span
+        className=""
+        title="badge"
+      >
+        NOT A MEMBER
+      </span>
+    </td>
+    <td>
+      <button
+        className=""
+        onClick={[Function]}
+        type="button"
+      >
+        Join Mission
+      </button>
+    </td>
+  </tr>
+</tbody>
+`;
