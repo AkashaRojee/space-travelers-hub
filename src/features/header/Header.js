@@ -1,34 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo  from './assets/image/planet.svg';
-import './header.css'
+import logo from './planet.svg';
 
 const linkList = [
-  { id: 1, name: 'Rockets', to: '/'},
-  { id: 2, name: 'Dragons', to: '/dragons'},
-  { id: 3, name: 'Missions', to: '/missions'},
-  { id: 4, name: 'My profile', to: '/profile'},
-]
+  { id: 1, name: 'Rockets', to: '/' },
+  { id: 2, name: 'Dragons', to: '/dragons' },
+  { id: 3, name: 'Missions', to: '/missions' },
+  { id: 4, name: 'My profile', to: '/profile' },
+];
 
-const Header = () => {
-  return (
-    <header class='header'>
-      <div class='container flex  space-between cross-center gap-2 '>
-        <img src={logo} alt="logo" class='logo' />
-        <nav className="nav-bar container ">
-          <ul className="nav-list flex  cross-center gap-3">
-            {
-              linkList.map(({ id, name, to }) => (
-            <li key={id} className="nav-link">
-              <NavLink activeClassName='active' exact={true} to={to}>{name}</NavLink>
-            </li>
-              ))
-            }
-          </ul>
-        </nav>
-      </div>
-    </header>
-  );
-};
+const Header = () => (
+  <header>
+    <img src={logo} alt="Space Travelers' Hub Logo" />
+    <h1>Space Travelers&apos; Hub</h1>
+    <nav>
+      {linkList.map(({ id, name, to }) => (
+        <NavLink key={id} activeClassName="active" exact to={to}>{name}</NavLink>
+      ))}
+    </nav>
+  </header>
+);
 
 export default Header;

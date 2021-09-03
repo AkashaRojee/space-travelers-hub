@@ -1,0 +1,57 @@
+@import '../../../app/scss/flex';
+
+.rd-row {
+  @extend %flex-row;
+
+  gap: 25px;
+
+  .rd-image {
+    @extend %flex-col;
+
+    img {
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .rd-details {
+    @extend %flex-col;
+
+    gap: 10px;
+
+    .rd-heading {
+      @extend %flex-row;
+      @extend %align-center;
+
+      span {
+        background-color: blue;
+        color: white;
+        border-radius: 2.5px;
+        padding: 1px 2.5px;
+        margin-right: 25px;
+      }
+    }
+
+    .rd-button {
+      margin-top: auto;
+      margin-bottom: 10px;
+
+      button {
+        font-family: inherit;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid blue;
+      }
+
+      .cancel {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+      }
+    }
+  }
+}

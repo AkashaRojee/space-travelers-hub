@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission component should match the snapshot 1`] = `
+<section
+  className="missions-section"
+>
+  <table
+    className="mission-table"
+  >
+    <thead>
+      <tr>
+        <th>
+          Missions
+        </th>
+        <th>
+          Descripition
+        </th>
+        <th>
+          Status
+        </th>
+        <th
+          aria-label="Leave/Join Mission"
+        />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</section>
+`;
