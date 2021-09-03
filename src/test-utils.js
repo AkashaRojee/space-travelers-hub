@@ -1,8 +1,8 @@
-import React from 'react'
-import { render as rtlRender } from '@testing-library/react'
-import { configureStore } from '@reduxjs/toolkit'
-import { Provider } from 'react-redux'
-import rocketsReducer from './features/rockets/rocketSlice'
+import React from 'react';
+import { render as rtlRender } from '@testing-library/react';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import rocketsReducer from './features/rockets/rocketSlice';
 import dragonReducer from './features/dragons/store/dragonsSlice';
 import missionSlice from './features/missions/missionSlice';
 
@@ -13,17 +13,19 @@ function render(
     store = configureStore(
       {
         reducer: { rockets: rocketsReducer, dragons: dragonReducer, missions: missionSlice },
-        preloadedState
-      }),
+        preloadedState,
+      },
+    ),
     ...renderOptions
-  } = {}
+  } = {},
 ) {
+  // /* eslint-disable-next-line react/prop-types */
   function Wrapper({ children }) {
-    return <Provider store={store}>{children}</Provider>
+    return <Provider store={store}>{children}</Provider>;
   }
-  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
+  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
 }
 
-export * from '@testing-library/react'
+export * from '@testing-library/react';
 
-export { render }
+export { render };

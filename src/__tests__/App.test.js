@@ -1,20 +1,19 @@
-import React from 'react'
-import { render, screen } from '../test-utils'
-import App from './App'
-import '@testing-library/jest-dom'
+import React from 'react';
+import '@testing-library/jest-dom';
+import { render, screen } from '../test-utils';
+import App from '../app/App';
 
 describe('When app loads', () => {
-
   beforeEach(() => {
     render(<App />);
   });
 
-  test('Menu items are displayed as links', () => { 
+  test('Menu items are displayed as links', () => {
     const rocketsMenu = screen.getByText('Rockets').closest('a');
     const dragonsMenu = screen.getByText('Dragons').closest('a');
     const missionsMenu = screen.getByText('Missions').closest('a');
     const profileMenu = screen.getByText('My profile').closest('a');
-  
+
     expect(rocketsMenu).toHaveAttribute('href');
     expect(dragonsMenu).toHaveAttribute('href');
     expect(missionsMenu).toHaveAttribute('href');
@@ -38,12 +37,5 @@ describe('When app loads', () => {
       expect(reserveButton).toBeVisible();
       expect(reserveButton).toHaveTextContent('Reserve');
     });
-    
   });
-
 });
-
-
-
-
-
