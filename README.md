@@ -10,7 +10,12 @@
 - Redux
 - SASS
 
-## Video Presentation
+## Live Demo
+
+[Live Demo Link](https://AkashaRojee.github.io/space-travelers-hub)
+
+## Video
+
 [video link](https://www.loom.com/share/48a08a3b0de14dbfa6de0594d31e7dd7)
 
 ## Getting Started
@@ -30,18 +35,21 @@ cd ./space-travelers-hub
 npm install
 ```
 
-### To Run it
+### Deployment
 
-```bash
-npm start
+**Note**: The content of the default output directory of React (`build`) is copied to `docs` upon build to facilitate publishing from GitHub Pages.
+
+#### To build the website:
+
 ```
-
-### Build
-
-```bash
 npm run build
 ```
 
+#### To serve the website directly:
+
+```
+npm start
+```
 
 ## Authors
 
