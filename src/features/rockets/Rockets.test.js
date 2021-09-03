@@ -1,6 +1,6 @@
 import React from 'react'
-import { render, screen } from '../test-utils'
-import Rockets from '../features/rockets/Rockets'
+import { render, screen } from '../../test-utils'
+import Rockets from './Rockets'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event';
 

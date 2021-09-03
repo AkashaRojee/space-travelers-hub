@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '../test-utils'
-import App from '../app/App'
+import App from './App'
 import '@testing-library/jest-dom'
 
 describe('When app loads', () => {
