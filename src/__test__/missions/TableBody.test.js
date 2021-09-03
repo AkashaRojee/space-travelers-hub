@@ -10,9 +10,7 @@ const missions = [
   },
 ];
 
-const join = (id) => {
-  console.log(id);
-};
+const join = (id) => id;
 
 describe('Table body component', () => {
   beforeEach(() => {
