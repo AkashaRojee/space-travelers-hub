@@ -2,9 +2,9 @@ import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import rocketsReducer from './features/rockets/rocketSlice';
-import dragonReducer from './features/dragons/store/dragonsSlice';
-import missionSlice from './features/missions/missionSlice';
+import rocketsReducer from './features/rockets/rocketsSlice';
+import dragonsReducer from './features/dragons/dragonsSlice';
+import missionsReducer from './features/missions/missionsSlice';
 
 function render(
   ui,
@@ -12,7 +12,7 @@ function render(
     preloadedState,
     store = configureStore(
       {
-        reducer: { rockets: rocketsReducer, dragons: dragonReducer, missions: missionSlice },
+        reducer: { rockets: rocketsReducer, dragons: dragonsReducer, missions: missionsReducer },
         preloadedState,
       },
     ),

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import dragonReducer from '../features/dragons/store/dragonsSlice';
-import rocketsReducer from '../features/rockets/rocketSlice';
-import missionSlice from '../features/missions/missionSlice';
+import dragonsReducer from '../features/dragons/dragonsSlice';
+import rocketsReducer from '../features/rockets/rocketsSlice';
+import missionsReducer from '../features/missions/missionsSlice';
 
 export default combineReducers({
-  dragons: dragonReducer,
+  dragons: dragonsReducer,
   rockets: rocketsReducer,
-  missions: missionSlice,
+  missions: missionsReducer,
 });

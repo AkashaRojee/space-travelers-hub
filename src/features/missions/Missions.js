@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import TableHeader from './TableHeader';
 import TableBody from './TableBody';
-import { getMissions, joinMission, leaveMission } from './missionSlice';
+import { getMissions, joinMission, leaveMission } from './missionsSlice';
 import './mission.scss';
 
 const Missions = () => {

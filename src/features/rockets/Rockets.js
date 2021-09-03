@@ -1,6 +1,6 @@
 import React, { useEffect, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getRockets, reserve, cancel } from './rocketSlice';
+import { getRockets, reserve, cancel } from './rocketsSlice';
 
 const RDRow = React.lazy(() => import('../../common/components/RDRow/RDRow'));
 

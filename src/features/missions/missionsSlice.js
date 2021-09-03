@@ -9,7 +9,7 @@ export const getMissions = createAsyncThunk('/missions/getMissions', async () =>
 export const joinMission = createAction('joinMission');
 export const leaveMission = createAction('leaveMission');
 
-const missionSlice = createSlice({
+const missionsSlice = createSlice({
   name: 'missons',
   initialState: {
     missions: [],
@@ -37,4 +37,4 @@ const missionSlice = createSlice({
   },
 });
 
-export default missionSlice.reducer;
+export default missionsSlice.reducer;

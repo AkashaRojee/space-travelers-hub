@@ -3,7 +3,7 @@ import ProfileColumn from './ProfileColumn';
 
 const Profiles = () => {
   const rockets = useSelector((state) => state.rockets);
-  const { list: dragonsList } = useSelector((state) => state.dragons);
+  const dragons = useSelector((state) => state.dragons);
   const { missions } = useSelector((state) => state).missions;
 
   const filteredMissions = missions
@@ -18,7 +18,7 @@ const Profiles = () => {
       />
       <ProfileColumn
         columnTitle="My Dragons"
-        reservedItems={dragonsList.filter((dragon) => dragon.isReserved === true)}
+        reservedItems={dragons.filter((dragon) => dragon.reserved === true)}
       />
       <ProfileColumn
         columnTitle="My Missions"
