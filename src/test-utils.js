@@ -19,7 +19,6 @@ function render(
     ...renderOptions
   } = {},
 ) {
-  // /* eslint-disable-next-line react/prop-types */
   function Wrapper({ children }) {
     return <Provider store={store}>{children}</Provider>;
   }
