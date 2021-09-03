@@ -10,6 +10,8 @@
 - Redux
 - SASS
 
+## Video Presentation
+[video link](https://www.loom.com/share/48a08a3b0de14dbfa6de0594d31e7dd7)
 
 ## Getting Started
 
