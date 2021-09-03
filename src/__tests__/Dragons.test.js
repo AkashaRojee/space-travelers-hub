@@ -11,7 +11,7 @@ describe('Clicking on Reserve/Cancel button', () => {
 
   test('Clicking on Reserve shows Reserved badge and changes text to Cancel', async () => {
     const buttons = await screen.findAllByRole('button');
-    
+
     userEvent.click(buttons[1]);
     const buttonsAfterClick = screen.getAllByRole('button');
     const reservedBadge = screen.getByText('Reserved');

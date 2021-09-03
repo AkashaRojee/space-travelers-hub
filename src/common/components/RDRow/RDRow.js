@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-
 import styles from './RDRow.module.scss';
 
 const RDRow = ({

@@ -255,7 +255,10 @@ const handlers = [
       return_payload_mass: { kg: 3000, lb: 6614 },
       return_payload_vol: { cubic_meters: 11, cubic_feet: 388 },
       pressurized_capsule: { payload_volume: { cubic_meters: 11, cubic_feet: 388 } },
-      trunk: { trunk_volume: { cubic_meters: 14, cubic_feet: 494 }, cargo: { solar_array: 2, unpressurized_cargo: true } },
+      trunk: {
+        trunk_volume: { cubic_meters: 14, cubic_feet: 494 },
+        cargo: { solar_array: 2, unpressurized_cargo: true },
+      },
       height_w_trunk: { meters: 7.2, feet: 23.6 },
       diameter: { meters: 3.7, feet: 12 },
       flickr_images: ['https://i.imgur.com/9fWdwNv.jpg', 'https://live.staticflickr.com/8578/16655995541_7817565ea9_k.jpg', 'https://farm3.staticflickr.com/2815/32761844973_4b55b27d3c_b.jpg', 'https://farm9.staticflickr.com/8618/16649075267_d18cbb4342_b.jpg'],
@@ -285,7 +288,11 @@ const handlers = [
       return_payload_mass: { kg: 3000, lb: 6614 },
       return_payload_vol: { cubic_meters: 11, cubic_feet: 388 },
       pressurized_capsule: { payload_volume: { cubic_meters: 11, cubic_feet: 388 } },
-      trunk: { trunk_volume: { cubic_meters: 14, cubic_feet: 494 }, cargo: { solar_array: 2, unpressurized_cargo: true } },
+      trunk:
+        {
+          trunk_volume: { cubic_meters: 14, cubic_feet: 494 },
+          cargo: { solar_array: 2, unpressurized_cargo: true },
+        },
       height_w_trunk: { meters: 7.2, feet: 23.6 },
       diameter: { meters: 3.7, feet: 12 },
       flickr_images: ['https://farm8.staticflickr.com/7647/16581815487_6d56cb32e1_b.jpg', 'https://farm1.staticflickr.com/780/21119686299_c88f63e350_b.jpg', 'https://farm9.staticflickr.com/8588/16661791299_a236e2f5dc_b.jpg'],
